@@ -19,7 +19,7 @@ const [review, setreview] = useState(``);
     prism.highlightAll()
   });
  async function reviewcode(){
-    const response=await axios.post('http://localhost:3000/ai/get-review',{code})
+    const response=await axios.post('https://apbackend-6vg6.onrender.com/ai/get-review',{code})
     setreview(response.data)
   }
 
