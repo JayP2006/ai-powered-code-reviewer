@@ -13,7 +13,7 @@ app.use(cors({
 app.get('/',(req,res)=>{
     res.send("hello world");
 })
-app.post('/ai',aiRoutes)
+app.use('/ai',aiRoutes)
 
 
 module.exports=app
