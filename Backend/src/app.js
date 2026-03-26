@@ -5,12 +5,15 @@ const cors=require('cors')
 
 
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+  origin: "https://ai-powered-code-reviewer-16zd.onrender.com",
+  credentials: true
+}));
 
 app.get('/',(req,res)=>{
     res.send("hello world");
 })
-app.use('/ai',aiRoutes)
+app.post('/ai',aiRoutes)
 
 
 module.exports=app
