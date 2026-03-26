@@ -6,8 +6,7 @@ const cors=require('cors')
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://ai-powered-code-reviewer-16zd.onrender.com",
-  credentials: true
+  origin: "*"
 }));
 
 app.get('/',(req,res)=>{
